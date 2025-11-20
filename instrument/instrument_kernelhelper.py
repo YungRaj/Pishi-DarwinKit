@@ -112,7 +112,7 @@ def get_path(patterns):
 
     command = [
         "dwarfdump",
-        "/Users/meysam/project/Pishi/kernels/Kernels/kernel.release.vmapple.dSYM/Contents/Resources/DWARF/kernel.release.vmapple"
+        "/Library/Developer/KDKs/KDK_26.2_25C5037j.kdk/System/Library/Kernels/kernel.release.vmapple.dSYM/Contents/Resources/DWARF/kernel.release.vmapple"
     ]
 
     result = subprocess.check_output(command)

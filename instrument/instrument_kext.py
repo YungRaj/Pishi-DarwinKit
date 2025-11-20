@@ -288,9 +288,9 @@ def main():
     stub_gen = Instruction()
     assembler = Assemblers.getAssembler(currentProgram) # type: ignore
 
-    pishi_start_address, pishi_end_address = get_kext("Kcov.macOS.Pishi")
+    pishi_start_address, pishi_end_address = get_kext("com.YungRaj.DarwinKit")
     if pishi_start_address == None or pishi_end_address == None:
-        print("could not find Kcov.macOS.Pishi")
+        print("could not find com.YungRaj.DarwinKit")
         exit(0)
         
     current_address = find_thunk(pishi_start_address, pishi_end_address)

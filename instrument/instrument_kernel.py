@@ -237,7 +237,7 @@ class Instruction():
         # "mov x0, #0x0000\n" // KEXT flag.
         stub_address = assemble_opcode(assembler, stub_address, "mov x0,#0x{}".format(kext_index))
 
-        #fill first arg of sanitizer_cov_trace_pc with address of patched instrction.(before aslr/noslid)
+        # fill first arg of sanitizer_cov_trace_pc with address of patched instrction.(before aslr/noslid)
         if USE_UNSLIDE:
             assembly_instructions = generate_assembly_instructions(str(patch_address))
             for inst in assembly_instructions:
@@ -346,9 +346,9 @@ def main():
    
     stub_gen = Instruction()
 
-    pishi_start_address, pishi_end_address = get_kext("Kcov.macOS.Pishi")
+    pishi_start_address, pishi_end_address = get_kext("com.YungRaj.DarwinKit")
     if pishi_start_address == None or pishi_end_address == None:
-        print("could not find Kcov.macOS.Pishi")
+        print("could not find com.YungRaj.DarwinKit")
         exit(0)
         
     current_address = find_thunk(pishi_start_address, pishi_end_address)
