@@ -256,7 +256,7 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
 
-    map_name_line = map_name_line = get_path(osfmk) # get pattern from config
+    map_name_line = get_path(osfmk + bsd_net) # get pattern from config
 
     kernel_text_start, kernel_text_end = get_kext("kernel.release.vmapple")
 
